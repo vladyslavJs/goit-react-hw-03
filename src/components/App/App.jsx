@@ -53,6 +53,7 @@ function App() {
       <ContactForm onAdd={addContact} />
       <hr />
       <h2 className={css.contactTitle}>Contacts:</h2>
+      <hr />
       <ContactList contacts={filterContacts} onDelete={deleteContact} />
       <hr />
     </div>
