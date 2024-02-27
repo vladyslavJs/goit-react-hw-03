@@ -1,19 +1,19 @@
-// import css from './Contact.module.css';
+import css from './Contact.module.css';
 
 import { ImUser, ImPhone, ImUserMinus } from 'react-icons/im';
 
 const Contact = ({ data: { id, name, number }, onDelete }) => {
   return (
-    <div>
+    <div className={css.list}>
       <p>
-        Name: <ImUser />
+        <ImUser className={css.icon} /> 
         {name}
       </p>
       <p>
-        Phone: <ImPhone />
+        <ImPhone className={css.icon}/>
         {number}
       </p>
-      <button onClick={() => onDelete(id)}>Delete: 
+      <button className={css.button} onClick={() => onDelete(id)}>Delete: 
         <ImUserMinus />
       </button>
     </div>
