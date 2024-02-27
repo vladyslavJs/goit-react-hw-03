@@ -1,14 +1,10 @@
-.list {
-    background-color: #fafafa;
-    border: 2px solid black;
-    width: 320px;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 0 auto;
-}
-
 .fixList {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+
+
+
+
