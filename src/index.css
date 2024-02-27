@@ -4,9 +4,8 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgb(240, 240, 240);
+  background-color: #242424;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,8 +50,7 @@ img {
 }
 
 input,
-textarea,
-fieldset {
+textarea {
   padding: 0;
   resize: none;
 }
