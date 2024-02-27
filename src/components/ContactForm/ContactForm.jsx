@@ -8,8 +8,8 @@ import { nanoid } from "nanoid";
 import css from './ContactForm.module.css'
 
 const ContactSchema = Yup.object().shape({
-    name: Yup.string().min(3, 'To short').max(50, 'To long!').required('Required field, please!'),
-    number: Yup.string().min(3, 'To short').max(50, 'To long!').required('Required field, please!')
+    name: Yup.string().min(3, 'To short').max(50, 'To long!').required('Required field!'),
+    number: Yup.string().min(3, 'To short').max(50, 'To long!').required('Required field!')
 });
 
 
@@ -27,17 +27,18 @@ const ContactForm = ({ onAdd }) => {
     >
       <Form className={css.container}>
         <div>
-            <label htmlFor={nameId}>Name: <ImUser/></label>
-            <Field type="text" name="name" id={nameId}></Field>
-            <ErrorMessage name="name" component="p"/>       
+            <label className={css.field} htmlFor={nameId}>Name: <ImUser/></label>
+            <Field type="text" name="name" id={nameId}
+             className={css.fieldfix} ></Field>
+            <ErrorMessage className={css.error} name="name" component="p"/>       
         </div>
 
-        <div>
+        <div >
             <label htmlFor={numberId}>Number: <ImPhone/> </label>
-            <Field type="text" name="number" id={numberId} />
-            <ErrorMessage name="number" component="p"/>           
+            <Field type="text" name="number" id={numberId} className={css.fieldfix} />
+            <ErrorMessage className={css.error} name="number" component="p"/>           
         </div>
-        <button type="submit">
+        <button className={css.button} type="submit">
           Add contact <ImUserPlus/>
         </button>
       </Form>
